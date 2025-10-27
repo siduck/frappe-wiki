@@ -168,7 +168,10 @@ window.Wiki = class Wiki {
             },
             100,
           );
-          $(".navbar-toggler").click();
+
+          const navbar_toggler = $(".navbar-toggler");
+          if (navbar_toggler.attr("aria-expanded") == "true")
+            navbar_toggler.click();
         });
     });
   }
